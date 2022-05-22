@@ -1,0 +1,108 @@
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.swiper {
+    
+    width: 1358px;
+    height: 695px;
+    background: #373535;
+    border-radius: 9px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #373535;
+
+    /* Center slide text vertically */
+    /* display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; */
+    display: flex;
+    /* -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center; */
+    justify-content: center;
+    /* -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center; */
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    height: 100%;
+    transition: 1s;
+    animation-delay: 2000ms;
+
+    /* object-fit: cover; */
+}
+.swiper-slide img+img{
+    position:absolute;
+    right:0;
+} 
+
+.swiper-button-prev, .swiper-button-next{
+    color: rgba(255,255,255,0.1);
+    padding: 1.5em;
+    font-weight:bolder;
+    top:46.5%;
+}
+.swiper-button-next{
+    border-radius: 9px 0 0 9px;
+    right:0;
+}
+.swiper-button-prev{
+    border-radius: 0 9px 9px 0;
+    left:0;
+}
+.swiper-button-prev:hover, .swiper-button-prev:action,
+.swiper-button-next:hover, .swiper-button-next:action{
+    color: rgba(0,0,0,0.3);
+    background: rgba(255,255,255,0.1);
+}
+.slide {
+    position: absolute;
+    -webkit-animation: slide 0.5s forwards; 
+    -webkit-animation-delay: 0s;
+    animation: slide 0.5s forwards;
+    animation-delay: 0s;
+}
+@-webkit-keyframes slide {
+    0% { transform : translate(0); }
+    100% { transform: translateX(-35%); }
+}
+
+@keyframes slide {
+    0% { transform : translate(0); }
+    100% { transform: translateX(-35%); }
+}
+.fadeIn {
+    opacity:0;
+    animation: fadeIn 1s forwards;
+    -webkit-animation: fadeIn 1s forwards;
+    -moz-animation: fadeIn 1s forwards;
+    -o-animation: fadeIn 1s forwards;
+    -ms-animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+  }
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
